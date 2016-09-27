@@ -1,0 +1,11 @@
+%h1 Sign-up
+
+= form_tag new_user_path do
+
+  = label :user_id, :title, 'User-ID'
+  = text_field :user_id, 'title'
+  
+  = label :email, :title, 'E-Mail'
+  = text_field :email, 'title'
+
+  = submit_tag 'Create'
