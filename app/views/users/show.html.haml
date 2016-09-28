@@ -1,0 +1,22 @@
+-# in app/views/movies/show.html.haml
+
+%h2 Details about #{@user.user_id}
+
+%ul#details
+  %li
+    User ID:
+    = @user.user_id
+  %li
+    User Email:
+    = @user.email
+  %li
+    Session Token
+    = @user.session_token
+
+%h3 : Description
+
+%p#description= @user.session_token
+
+= link_to 'Edit', edit_movie_path(@movie)
+= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to movie list', movies_path
